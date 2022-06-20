@@ -1,0 +1,10 @@
+%echo off
+rem このファイルの配置フォルダをカレントにする
+pushd %0\..
+rem 画面をクリア
+cls
+rem pythonスクリプトを実行
+python C:\Users\zeroc\work\appTwitter\mainTwitter.py
+rem 実行するpythonスクリプトファイル"hello.py"はフルパスで指定します。
+rem 30秒間待機
+timeout /t 30
