@@ -3,28 +3,19 @@ from pprint import pprint
 import schedule
 from time import sleep
 import PersonalInfoTwitter
-from func import ClientInfo,getURL
+from func import tweetTask
 
 try:
-    # メッセージを指定
-    message_main = "Hello World!!\n今日のpickup記事はこちら!\n※これは定期tweetです\n"
-
-    # URLをランダムで取得
-    url = getURL()
-
-    # メッセージタグを指定
-    message_tag = "#blog #ブログ #ブログ初心者 #ブログ仲間 #ブログ仲間募集\n#python #自動化"
-
-    # messageを結合
-    message = message_main + url + message_tag
-
-    # メッセージの長さを判定 全角180 半角280
-    if len(message) >180:
-        message = "Hello World!"
-
+    # 処理開始メッセージ
+    print('Twitter自動投稿処理を開始します')
     # tweet実施
-    tweet = ClientInfo().create_tweet(text=message)
-
+    tweetTask()
+    
+    # schedule.every().days.at("21:52").do(tweetTask)
+    # while True:
+    #     schedule.run_pending()
+    #     sleep(1)
+    
 except:
     print('エラーが発生しました')
 
@@ -42,3 +33,15 @@ else:
 
 # pprint(delete_tweet)
 
+# 定期実行メモ
+# #01 定期実行する関数を準備
+# def task():
+#     print("タスク実行中")
+    
+# #02 スケジュール登録
+# schedule.every().days.at("7:00").do(task)
+
+# #03 イベント実行
+# while True:
+#     schedule.run_pending()
+#     sleep(1)

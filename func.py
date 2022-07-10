@@ -50,6 +50,17 @@ def getURL():
         7:"https://wkwkdkdk-blog.com/camp-diary/camp2_1/",
         8:"https://wkwkdkdk-blog.com/it-page/it_1/",
         9:"https://wkwkdkdk-blog.com/it-page/it_2/",
+        10:"https://wkwkdkdk-blog.com/it-page/it3/",
+        11:"https://wkwkdkdk-blog.com/it-page/it4/",
+        12:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki27/",
+        13:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki23/",
+        14:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki20/",
+        15:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki19/",
+        16:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki13/",
+        17:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki6/",
+        18:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki2/",
+        19:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki1/",
+        20:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki3/",
         }
 
     # 引数が辞書のlengthより大きい場合
@@ -62,3 +73,22 @@ def getURL():
     url = dic_url[randam_number] + "\n"
     return url
 
+def tweetTask():
+    # メッセージを指定
+    message_main = "Hello World!!\n今日のpickup記事はこちら!\n※これは定期tweetです\n"
+
+    # URLをランダムで取得
+    url = getURL()
+
+    # メッセージタグを指定
+    message_tag = "#blog #ブログ #ブログ初心者 #ブログ仲間 #ブログ仲間募集\n#python #自動化"
+
+    # messageを結合
+    message = message_main + url + message_tag
+
+    # メッセージの長さを判定 全角180 半角280
+    if len(message) >180:
+        message = "Hello World!"
+
+    # tweet実施
+    tweet = ClientInfo().create_tweet(text=message)

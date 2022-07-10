@@ -130,3 +130,4 @@ dmypy.json
 
 # 個人情報ファイルは除外
 PersonalInfoTwitter.py
+APIKey.txt
