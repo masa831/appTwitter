@@ -40,27 +40,10 @@ def getURL():
     randam_number = 99
 
     # URLを格納した辞書を定義
+    # 暫定で適当なURLを設定
     dic_url = {
-        1:"https://wkwkdkdk-blog.com/",
-        2:"https://wkwkdkdk-blog.com/camp-diary/camp1/",
-        3:"https://wkwkdkdk-blog.com/camp-diary/camp2/",
-        4:"https://wkwkdkdk-blog.com/camp-diary/camp3/",
-        5:"https://wkwkdkdk-blog.com/camp-diary/camp2_2/",
-        6:"https://wkwkdkdk-blog.com/camp-diary/camp1_2/",
-        7:"https://wkwkdkdk-blog.com/camp-diary/camp2_1/",
-        8:"https://wkwkdkdk-blog.com/it-page/it_1/",
-        9:"https://wkwkdkdk-blog.com/it-page/it_2/",
-        10:"https://wkwkdkdk-blog.com/it-page/it3/",
-        11:"https://wkwkdkdk-blog.com/it-page/it4/",
-        12:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki27/",
-        13:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki23/",
-        14:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki20/",
-        15:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki19/",
-        16:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki13/",
-        17:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki6/",
-        18:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki2/",
-        19:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki1/",
-        20:"https://wkwkdkdk-blog.com/mitinoeki-page/mitinoeki3/",
+        1:"https://www.amazon.co.jp/",
+        2:"https://www.youtube.com/",
         }
 
     # 引数が辞書のlengthより大きい場合
@@ -81,7 +64,7 @@ def tweetTask():
     url = getURL()
 
     # メッセージタグを指定
-    message_tag = "#blog #ブログ #ブログ初心者 #ブログ仲間 #ブログ仲間募集\n#python #自動化"
+    message_tag = "#python #自動化"
 
     # messageを結合
     message = message_main + url + message_tag
